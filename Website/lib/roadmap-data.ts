@@ -1,0 +1,58 @@
+export const ROADMAP_NODES = [
+  {
+    id: "math",
+    label: "Math Basics",
+    description: "Linear algebra, calculus, and probability fundamentals needed for machine learning.",
+    prereq: [],
+    to: ["gd"],
+  },
+  {
+    id: "gd",
+    label: "Gradient Descent",
+    description: "Core optimization algorithm that powers neural network training.",
+    prereq: ["math"],
+    to: ["backprop"],
+  },
+  {
+    id: "backprop",
+    label: "Backpropagation",
+    description: "The algorithm that enables neural networks to learn by computing gradients efficiently.",
+    prereq: ["gd"],
+    to: ["cnns", "rnns"],
+  },
+  {
+    id: "cnns",
+    label: "CNNs",
+    description: "Convolutional Neural Networks for computer vision and spatial pattern recognition.",
+    prereq: ["backprop"],
+    to: ["attention"],
+  },
+  {
+    id: "rnns",
+    label: "RNNs",
+    description: "Recurrent Neural Networks for sequential data and time series modeling.",
+    prereq: ["backprop"],
+    to: ["attention"],
+  },
+  {
+    id: "attention",
+    label: "Attention Mechanisms",
+    description: "The breakthrough mechanism that allows models to focus on relevant parts of input.",
+    prereq: ["rnns", "cnns"],
+    to: ["transformers"],
+  },
+  {
+    id: "transformers",
+    label: "Transformers",
+    description: "The architecture that revolutionized NLP and enabled modern language models.",
+    prereq: ["attention"],
+    to: ["modern-nlp"],
+  },
+  {
+    id: "modern-nlp",
+    label: "Modern NLP",
+    description: "BERT, GPT, T5, and the latest developments in natural language processing.",
+    prereq: ["transformers"],
+    to: [],
+  },
+]
